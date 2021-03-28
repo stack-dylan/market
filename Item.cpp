@@ -7,15 +7,15 @@ Item::Item(std::string nm, int cp) {
     cprice = cp;
 }
 
-float Item::price() {
+float Item::price() const {
     return float(cprice)/100;
 }
 
-int Item::cents() {
+int Item::cents() const {
     return cprice;
 }
 
-void Item::print(void) {
+void Item::print(void) const {
     std::cout << name << " $" << std::fixed
-        << std::setprecision(2) << price() << std::endl;
+        << std::setprecision(2) << price();
 }
